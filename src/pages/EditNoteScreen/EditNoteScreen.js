@@ -53,7 +53,13 @@ export default () => {
                 }));
                 navigation.goBack();
             } else {
-                dispatch(addNote(title, body));
+                dispatch(addNote({
+                    type: 'addNote',
+                    payload: {
+                        title,
+                        body
+                    }
+                }));
                 navigation.goBack();
             }
         } else {

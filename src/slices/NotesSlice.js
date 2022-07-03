@@ -19,8 +19,8 @@ const NoteSlice = createSlice({
     reducers:{
         addNote(state, action) {
             state.list.push({
-                title: action.payload,
-                body: action.payload
+                title: action.payload.payload.title,
+                body: action.payload.payload.body
             })
         },
         editNote(state, action){
