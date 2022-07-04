@@ -43,23 +43,21 @@ export default () => {
     const hendleSaveButton = () => {
         if((title != '') && (body != '')){
             if(status == 'edit'){
-                dispatch(editNote({
-                    type: 'editNote',
-                    payload: {
+                dispatch(
+                    editNote({
                         key: route.params.key,
                         title, 
                         body
-                    }
-                }));
+                    })
+                );
                 navigation.goBack();
             } else {
-                dispatch(addNote({
-                    type: 'addNote',
-                    payload: {
+                dispatch(
+                    addNote({
                         title,
                         body
-                    }
-                }));
+                    })
+                );
                 navigation.goBack();
             }
         } else {

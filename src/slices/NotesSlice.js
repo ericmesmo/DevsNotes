@@ -19,15 +19,15 @@ const NoteSlice = createSlice({
     reducers:{
         addNote(state, action) {
             state.list.push({
-                title: action.payload.payload.title,
-                body: action.payload.payload.body
+                title: action.payload.title,
+                body: action.payload.body
             })
         },
         editNote(state, action){
-            if(state.list[action.payload.payload.key]){
-                state.list[action.payload.payload.key] = {
-                    title: action.payload.payload.title,
-                    body: action.payload.payload.body
+            if(state.list[action.payload.key]){
+                state.list[action.payload.key] = {
+                    title: action.payload.title,
+                    body: action.payload.body
                 }
             }
         },
